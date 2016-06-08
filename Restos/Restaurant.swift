@@ -11,6 +11,6 @@ struct Restaurant {
     let name: String
     var address: String
     let style: String
-    var note: Float
+    var note: Float?
     var visited: Bool
 }
