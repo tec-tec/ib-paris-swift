@@ -27,7 +27,7 @@ class FormViewController: UIViewController {
     }
 
     @IBAction func visitedSwitchChanged(sender: UISwitch) {
-        
+        gradeSlider.enabled = sender.on
     }
 
     @IBAction func save(sender: UIButton) {
