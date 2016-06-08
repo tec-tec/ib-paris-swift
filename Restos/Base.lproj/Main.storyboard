@@ -34,6 +34,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3T-EG-YqR">
                                 <rect key="frame" x="26" y="28" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bb2-G8-GK4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adresse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBZ-Dw-BuK">
                                 <rect key="frame" x="20" y="133" width="62" height="21"/>
@@ -53,6 +56,9 @@
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lAW-8z-8CU">
                                 <rect key="frame" x="127" y="267" width="51" height="31"/>
+                                <connections>
+                                    <action selector="visitedSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="aJH-7d-LZl"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Déjà visité ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03K-Ft-BR7">
                                 <rect key="frame" x="20" y="272" width="92" height="21"/>
@@ -69,6 +75,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="adressTextField" destination="pxY-th-7Ay" id="gqV-Xx-t0d"/>
+                        <outlet property="gradeSlider" destination="aEz-nS-noY" id="SMc-PX-0ER"/>
+                        <outlet property="nameTextField" destination="Smr-tL-cwL" id="WKT-ww-Az6"/>
+                        <outlet property="styleTextField" destination="eET-QS-SAW" id="1aD-yj-QdW"/>
+                        <outlet property="visitedSwitch" destination="lAW-8z-8CU" id="fay-OQ-BmB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
