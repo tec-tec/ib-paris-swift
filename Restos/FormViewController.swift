@@ -16,6 +16,8 @@ class FormViewController: UIViewController {
     @IBOutlet weak var visitedSwitch: UISwitch!
     @IBOutlet weak var gradeSlider: UISlider!
 
+    var library = RestaurantLibrary()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,6 +34,30 @@ class FormViewController: UIViewController {
 
     @IBAction func save(sender: UIButton) {
 
+        guard let name = nameTextField.text where !name.isEmpty else {
+            return
+        }
+
+        guard let style = styleTextField.text where !style.isEmpty else {
+            return
+        }
+
+        guard let address = adressTextField.text where !address.isEmpty else {
+            return
+        }
+
+        defer {
+            library.add(resto)
+        }
+
+        var resto = Restaurant(name: name, address: address, style: style)
+
+        guard visitedSwitch.on else {
+            return
+        }
+
+        resto.visited = visitedSwitch.on
+        resto.note = gradeSlider.value
     }
 
 }
