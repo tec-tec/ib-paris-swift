@@ -8,7 +8,11 @@
 
 struct RestaurantLibrary {
 
-    private var restaurantArray = [Restaurant]()
+    private var restaurantArray: [Restaurant]
+
+    init() {
+        restaurantArray = []
+    }
 
     var allRestaurants: [Restaurant] {
         return restaurantArray
