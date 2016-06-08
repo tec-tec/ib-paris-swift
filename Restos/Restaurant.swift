@@ -13,4 +13,12 @@ struct Restaurant {
     let style: String
     var note: Float?
     var visited: Bool
+
+    init(name: String, address: String, style: String, note: Float? = nil, visited: Bool = false) {
+        self.name = name
+        self.address = address
+        self.style = style
+        self.note = note
+        self.visited = visited
+    }
 }
