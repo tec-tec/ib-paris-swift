@@ -14,6 +14,8 @@
 		336ABF741D085F9D006CD142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 336ABF721D085F9D006CD142 /* LaunchScreen.storyboard */; };
 		336ABF7F1D085F9D006CD142 /* RestosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336ABF7E1D085F9D006CD142 /* RestosTests.swift */; };
 		336ABF8A1D085F9D006CD142 /* RestosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336ABF891D085F9D006CD142 /* RestosUITests.swift */; };
+		336ABF981D0868B1006CD142 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336ABF971D0868B1006CD142 /* Restaurant.swift */; };
+		336ABF9A1D0868BE006CD142 /* ResturantLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336ABF991D0868BE006CD142 /* ResturantLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		336ABF851D085F9D006CD142 /* RestosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		336ABF891D085F9D006CD142 /* RestosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestosUITests.swift; sourceTree = "<group>"; };
 		336ABF8B1D085F9D006CD142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		336ABF971D0868B1006CD142 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		336ABF991D0868BE006CD142 /* ResturantLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResturantLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				336ABF691D085F9D006CD142 /* AppDelegate.swift */,
 				336ABF6B1D085F9D006CD142 /* FormViewController.swift */,
+				336ABF971D0868B1006CD142 /* Restaurant.swift */,
+				336ABF991D0868BE006CD142 /* ResturantLibrary.swift */,
 				336ABF6D1D085F9D006CD142 /* Main.storyboard */,
 				336ABF701D085F9D006CD142 /* Assets.xcassets */,
 				336ABF721D085F9D006CD142 /* LaunchScreen.storyboard */,
@@ -258,6 +264,8 @@
 			files = (
 				336ABF6C1D085F9D006CD142 /* FormViewController.swift in Sources */,
 				336ABF6A1D085F9D006CD142 /* AppDelegate.swift in Sources */,
+				336ABF9A1D0868BE006CD142 /* ResturantLibrary.swift in Sources */,
+				336ABF981D0868B1006CD142 /* Restaurant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
