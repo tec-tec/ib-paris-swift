@@ -22,3 +22,40 @@ struct Restaurant {
         self.visited = visited
     }
 }
+
+extension Restaurant: Mappable {
+    var title: String {
+        return name
+    }
+}
+
+protocol Mappable {
+
+    var title: String { get }
+    var address: String { get }
+
+    func test()
+}
+
+protocol Mappable2: Mappable {
+
+    func test()
+}
+
+extension Mappable {
+    var title: String {
+        return"TOTO"
+    }
+
+
+    func test() {
+        print("1")
+    }
+}
+
+extension Mappable2 {
+
+    func test() {
+        print("2")
+    }
+}
