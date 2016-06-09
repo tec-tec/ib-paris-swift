@@ -6,7 +6,7 @@
 //  Copyright © 2016 Tec-Tec. All rights reserved.
 //
 
-struct Restaurant {
+struct Restaurant: Equatable {
 
     let name: String
     var address: String
@@ -23,6 +23,10 @@ struct Restaurant {
     }
 }
 
+func ==(lhs: Restaurant, rhs: Restaurant) -> Bool {
+
+    return lhs.name == rhs.name && lhs.address == rhs.address
+}
 extension Restaurant: Mappable {
     var title: String {
         return name
