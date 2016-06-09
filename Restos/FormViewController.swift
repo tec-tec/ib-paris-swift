@@ -16,7 +16,7 @@ class FormViewController: UIViewController {
     @IBOutlet weak var visitedSwitch: UISwitch!
     @IBOutlet weak var gradeSlider: UISlider!
 
-    var library = RestaurantLibrary()
+    var library = RestaurantLibrary.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()

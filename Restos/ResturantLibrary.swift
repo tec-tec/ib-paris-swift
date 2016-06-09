@@ -8,10 +8,20 @@
 
 struct RestaurantLibrary {
 
+    static let sharedInstance = RestaurantLibrary()
+
     private var restaurantArray: [Restaurant]
 
-    init() {
+    private init() {
         restaurantArray = []
+
+        let resto1 = Restaurant(name: "Resto1", address: "Adress1", style: "Style1")
+        let resto2 = Restaurant(name: "Resto2", address: "Adress2", style: "Style2")
+        let resto3 = Restaurant(name: "Resto3", address: "Adress3", style: "Style3")
+
+        restaurantArray.append(resto1)
+        restaurantArray.append(resto2)
+        restaurantArray.append(resto3)
     }
 
     var allRestaurants: [Restaurant] {
