@@ -6,6 +6,8 @@
 //  Copyright © 2016 Tec-Tec. All rights reserved.
 //
 
+import Foundation
+
 struct RestaurantLibrary {
 
     static let sharedInstance = RestaurantLibrary()
@@ -29,7 +31,11 @@ struct RestaurantLibrary {
     }
 
     mutating func add(restaurant: Restaurant) {
+        
         restaurantArray.append(restaurant)
+
+        let notCenter = NSNotificationCenter.defaultCenter()
+        notCenter.postNotificationName(Constants.Notifications.modelUpdatedNotifName, object: nil)
     }
 
 }

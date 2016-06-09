@@ -60,5 +60,16 @@ class FormViewController: UIViewController {
         resto.note = gradeSlider.value
     }
 
+    @IBAction func cancel(sender: AnyObject) {
+
+        //Pour du modal
+        dismissViewControllerAnimated(true, completion: {()->() in
+
+
+        })
+
+        //Pour de la navigation
+        navigationController?.popViewControllerAnimated(true)
+    }
 }
 

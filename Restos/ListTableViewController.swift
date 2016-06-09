@@ -6,12 +6,19 @@
 //  Copyright © 2016 Tec-Tec. All rights reserved.
 //
 
+// https://github.com/tec-tec/ib-paris-swift
+
 import UIKit
 
 class ListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let notCenter = NSNotificationCenter.defaultCenter()
+        notCenter.addObserverForName(Constants.Notifications.modelUpdatedNotifName, object: nil, queue: nil) { (notif) in
+            self.tableView.reloadData()
+        }
 
     }
 
