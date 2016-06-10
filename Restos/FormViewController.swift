@@ -16,8 +16,6 @@ class FormViewController: UIViewController {
     @IBOutlet weak var visitedSwitch: UISwitch!
     @IBOutlet weak var gradeSlider: UISlider!
 
-    var library = RestaurantLibrary.sharedInstance
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -47,7 +45,8 @@ class FormViewController: UIViewController {
         }
 
         defer {
-            library.add(resto)
+            RestaurantLibrary.sharedInstance.add(resto)
+            dismissViewControllerAnimated(true, completion: nil)
         }
 
         var resto = Restaurant(name: name, address: address, style: style)

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RestaurantLibrary {
+class RestaurantLibrary {
 
     static let sharedInstance = RestaurantLibrary()
 
@@ -30,7 +30,7 @@ struct RestaurantLibrary {
         return restaurantArray
     }
 
-    mutating func add(restaurant: Restaurant) {
+    func add(restaurant: Restaurant) {
         
         restaurantArray.append(restaurant)
 
