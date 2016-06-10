@@ -82,14 +82,29 @@ class ListTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+
+        if segue.identifier == "showDetails" {
+
+            guard let dest = segue.destinationViewController as? RestaurantDetailsViewController else { return }
+
+            //Ne pas setter les outlets !!!!!
+//            dest.restoNameLabel.text = "eg"
+
+            let indexPath = tableView.indexPathForSelectedRow
+
+            let cell = sender as! UITableViewCell
+            let indexpath2 = tableView.indexPathForCell(cell)
+
+            dest.currentResto = RestaurantLibrary.sharedInstance.allRestaurants[indexpath2!.row]
+        }
     }
-    */
+
 
 }

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
     </dependencies>
     <scenes>
         <!--Form View Controller-->
@@ -92,7 +93,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1252" y="359"/>
+            <point key="canvasLocation" x="1356" y="25"/>
+        </scene>
+        <!--Restaurant Details View Controller-->
+        <scene sceneID="HUa-ZE-JXs">
+            <objects>
+                <viewController id="y5b-yJ-3Ar" customClass="RestaurantDetailsViewController" customModule="Restos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kSX-Om-tVa"/>
+                        <viewControllerLayoutGuide type="bottom" id="as7-FY-ZgI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JFS-Na-Lc4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAX-do-BHs">
+                                <rect key="frame" x="20" y="72" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="restoNameLabel" destination="pAX-do-BHs" id="GRz-NL-FBK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8zo-xI-Pep" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294" y="691"/>
         </scene>
         <!--Restaurants-->
         <scene sceneID="Wnq-fR-VFx">
@@ -127,6 +157,12 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.97254902119999997" green="0.69411766529999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="y5b-yJ-3Ar" kind="show" identifier="showDetails" id="vNE-I0-MCr">
+                                        <segue key="commit" inheritsFrom="parent" id="0kt-KR-Bxt"/>
+                                        <segue key="preview" inheritsFrom="commit" id="WMo-d1-h3U"/>
+                                    </segue>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -137,7 +173,7 @@
                     <navigationItem key="navigationItem" title="Restaurants" id="99z-ys-3Ed">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="2P2-J9-YhQ">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="hVI-sg-cyc"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="showForm" id="hVI-sg-cyc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -165,4 +201,7 @@
             <point key="canvasLocation" x="-300" y="359"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vNE-I0-MCr"/>
+    </inferredMetricsTieBreakers>
 </document>
